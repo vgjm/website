@@ -1,0 +1,4 @@
+baseURL = 'http://vgjm.github.io/'
+languageCode = 'en-us'
+title = "Velcome to gjm's website"
+theme = "ananke"
