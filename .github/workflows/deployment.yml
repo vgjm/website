@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VERSION: 0.97.3
+      VERSION: '0.97.3'
       BRANCH: public
       DIR: build
     steps:
@@ -23,8 +23,8 @@ jobs:
     - name: Install hugo
       run: |
         cd ..
-        curl -LO https://github.com/gohugoio/hugo/releases/download/v$VERSION/hugo_$VERSION_Linux-64bit.tar.gz
-        tar -zxf hugo_$VERSION_Linux-64bit.tar.gz
+        curl -LO 'https://github.com/gohugoio/hugo/releases/download/v'$VERSION'/hugo_'$VERSION'_Linux-64bit.tar.gz'
+        tar -zxf 'hugo_'$VERSION'_Linux-64bit.tar.gz'
         mv hugo /usr/local/bin/
     - name: Create local changes
       run: |
