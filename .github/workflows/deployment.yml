@@ -4,12 +4,14 @@ on:
   push:
     branches:
     - 'main'
+  pull_request:
+    branches:
+    - 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VERSION: v0.92.1
       BRANCH: public
       DIR: build
     steps:
@@ -18,9 +20,7 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Setup hugo
-      uses: lowply/build-hugo@$VERSION
-      with:
-        go-version: '1.18.1'
+      uses: lowply/build-hugo@v0.92.1
     - name: Create local changes
       run: |
         hugo -d build
