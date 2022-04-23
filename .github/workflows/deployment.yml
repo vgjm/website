@@ -28,6 +28,7 @@ jobs:
     - name: Create local changes
       run: |
         hugo -d build
+        date > build/build.log
 
     - name: Commit files
       run: |
