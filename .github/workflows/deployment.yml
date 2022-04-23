@@ -29,8 +29,6 @@ jobs:
         hugo version
     - name: Create local changes
       run: |
-        ls
-        cd website
         hugo -d build
     - name: Commit files
       run: |
